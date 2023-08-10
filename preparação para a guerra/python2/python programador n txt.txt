@@ -1,0 +1,33 @@
+Construir um algoritmo que receba como entrada os dados de N funcionários de uma empresa: nome, cargo e salário.
+Após verifique o total dos salários por
+
+carga:
+
+Analista de Sistemas Programador
+
+Exibir ao final a soma de todos os salários da empresa
+cargos = {
+    "Analista de Sistemas": 0,
+    "Programador": 0
+}
+
+n = int(input("Digite o número de funcionários: "))
+
+for _ in range(n):
+    nome = input("Digite o nome do funcionário: ")
+    cargo = input("Digite o cargo do funcionário (Analista de Sistemas ou Programador): ")
+    salario = float(input("Digite o salário do funcionário: "))
+
+    if cargo in cargos:
+        cargos[cargo] += salario
+    else:
+        print("Cargo inválido!")
+
+total_salarios = sum(cargos.values())
+
+print("\nTotal de salários por cargo:")
+for cargo, total_salario in cargos.items():
+    print(f"{cargo}: R$ {total_salario:.2f}")
+
+print(f"\nTotal de salários da empresa: R$ {total_salarios:.2f}")
+

@@ -1,0 +1,36 @@
+# Função para calcular o valor final com base no tipo de pagamento
+def calcular_valor_final(preco, tipo_pagamento):
+    if tipo_pagamento == 1:  # À vista em dinheiro
+        valor_final = preco * 0.9  # 10% de desconto
+    elif tipo_pagamento == 2:  # À vista no cartão de crédito
+        valor_final = preco * 0.95  # 5% de desconto
+    elif tipo_pagamento == 3:  # Em duas vezes
+        valor_final = preco
+    elif tipo_pagamento == 4:  # Em três vezes
+        valor_final = preco * 1.05  # 5% de acréscimo
+    else:
+        valor_final = 0  # Tipo de pagamento inválido
+    
+    return valor_final
+
+# Leitura dos dados do produto
+nome_produto = input("Digite o nome do produto: ")
+quantidade = int(input("Digite a quantidade: "))
+preco_unitario = float(input("Digite o preço unitário: "))
+
+# Cálculo do preço total
+preco_total = quantidade * preco_unitario
+
+# Leitura do tipo de pagamento
+tipo_pagamento = int(input("Digite o tipo de pagamento (1 - À vista em dinheiro, 2 - À vista no cartão de crédito, 3 - Em duas vezes, 4 - Em três vezes): "))
+
+# Cálculo do valor final a ser pago
+valor_final = calcular_valor_final(preco_total, tipo_pagamento)
+
+# Exibição do resultado
+print("Produto:", nome_produto)
+print("Quantidade:", quantidade)
+print("Preço unitário: R$", preco_unitario)
+print("Preço total: R$", preco_total)
+print("Tipo de pagamento:", tipo_pagamento)
+print("Valor final a ser pago: R$", valor_final)

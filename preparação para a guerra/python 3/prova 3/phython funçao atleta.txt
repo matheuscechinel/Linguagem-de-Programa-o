@@ -1,0 +1,29 @@
+screva um programa em PYTHON que leia nome e idade de um atleta. Deve conter uma função que receba a idade como parámetro, após verifique e retorne ao programa principal a sua classificação, de acordo com as seguintes regras
+
+idade entre 0 e 10 anos - categoria Infantil
+
+dade entre 11 e 17 anos - categoria Juvenil
+
+idade entre 18 e 30 anos - categoria Adulto • Idade acima de 30 anos - categoria Sênior
+
+
+def classificar_atleta(idade):
+    if idade >= 0 and idade <= 10:
+        return "Infantil"
+    elif idade >= 11 and idade <= 17:
+        return "Juvenil"
+    elif idade >= 18 and idade <= 30:
+        return "Adulto"
+    elif idade > 30:
+        return "Sênior"
+    else:
+        return "Idade inválida"
+
+nome = input("Digite o nome do atleta: ")
+idade = int(input("Digite a idade do atleta: "))
+
+classificacao = classificar_atleta(idade)
+
+print("Nome do atleta:", nome)
+print("Idade do atleta:", idade)
+print("Classificação:", classificacao)

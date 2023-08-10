@@ -1,0 +1,17 @@
+algoritmo "Conversão de Temperatura"
+var
+   celsius, kelvin, reaumur, fahrenheit, rankine: real
+inicio
+   escreva("Digite a temperatura em Celsius: ")
+   leia(celsius)
+
+   fahrenheit <- celsius * 1.8 + 32
+   kelvin <- celsius + 273.15
+   reaumur <- celsius * 0.8
+   rankine <- celsius * 1.8 + 32 + 459.67
+
+   escreva("Temperatura em Fahrenheit: ", fahrenheit)
+   escreva("Temperatura em Kelvin: ", kelvin)
+   escreva("Temperatura em Réaumur: ", reaumur)
+   escreva("Temperatura em Rankine: ", rankine)
+fimalgoritmo

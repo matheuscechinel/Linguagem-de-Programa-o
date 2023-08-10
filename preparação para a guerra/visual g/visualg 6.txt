@@ -1,0 +1,20 @@
+Algoritmo ConversaoMoeda
+    // Ler a quantidade de dinheiro e a cotação do dólar
+    Leia quantidadeDinheiro
+    Leia cotacaoDolar
+
+    // Exibir o menu de conversão
+    Escreva "Menu de Conversão:"
+    Escreva "1 - Converter de R$ para US$"
+    Escreva "2 - Converter de US$ para R$"
+    Leia opcao
+
+    // Realizar a conversão de acordo com a opção escolhida
+    Se opcao == 1 Então
+        quantidadeDolar <- quantidadeDinheiro / cotacaoDolar
+        Escreva "Valor em dólar: ", quantidadeDolar
+    Senão Se opcao == 2 Então
+        quantidadeReal <- quantidadeDinheiro * cotacaoDolar
+        Escreva "Valor em reais: ", quantidadeReal
+    FimSe
+FimAlgoritmo

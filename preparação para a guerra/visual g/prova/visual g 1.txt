@@ -1,0 +1,34 @@
+ALGORITMO "Calculadora de IMC"
+VAR
+    nome: CARACTERE
+    peso, altura, imc: REAL
+
+INICIO
+    ESCREVA ("Digite o nome da pessoa: ")
+    LEIA (nome)
+
+    ESCREVA ("Digite o peso (em kg): ")
+    LEIA (peso)
+
+    ESCREVA ("Digite a altura (em metros): ")
+    LEIA (altura)
+
+    imc <- peso / (altura * altura)
+
+    ESCREVA ("Relatório de IMC")
+    ESCREVA ("Nome: ", nome)
+    ESCREVA ("Peso: ", peso, " kg")
+    ESCREVA ("Altura: ", altura, " metros")
+    ESCREVA ("IMC: ", imc)
+
+    SE imc < 18.5 ENTÃO
+        ESCREVA ("Condição: Abaixo do peso")
+    SENÃO SE imc >= 18.5 E imc < 25 ENTÃO
+        ESCREVA ("Condição: Peso normal")
+    SENÃO SE imc >= 25 E imc < 30 ENTÃO
+        ESCREVA ("Condição: Acima do peso")
+    SENÃO
+        ESCREVA ("Condição: Obeso")
+    FIMSE
+
+FIMALGORITMO

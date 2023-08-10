@@ -1,0 +1,15 @@
+Algoritmo CalcularReformaPracas
+    // Ler o valor da verba em dólares e a cotação do dólar
+    Leia valorVerbaDolar
+    Leia cotacaoDolar
+
+    // Converter o valor da verba para reais
+    valorVerbaReal <- valorVerbaDolar * cotacaoDolar
+
+    // Calcular o número aproximado de praças que podem ser reformadas
+    numeroPracas <- valorVerbaReal / 1350
+
+    // Exibir os resultados
+    Escreva "Valor da verba em reais: ", valorVerbaReal
+    Escreva "Número de praças que podem ser reformadas: ", numeroPracas
+FimAlgoritmo

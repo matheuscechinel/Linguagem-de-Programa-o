@@ -1,0 +1,17 @@
+
+
+
+nome = input("Digite o nome do cliente: ")
+saldo_medio = float(input("Digite o saldo médio do cliente: "))
+
+if saldo_medio <= 2000:
+    valor_credito = 0
+elif saldo_medio <= 4000:
+    valor_credito = saldo_medio * 0.05
+elif saldo_medio <= 6000:
+    valor_credito = saldo_medio * 0.1
+else:
+    valor_credito = saldo_medio * 0.15
+
+print("Cliente:", nome)
+print("Valor do Crédito:", valor_credito)

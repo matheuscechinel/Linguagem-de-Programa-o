@@ -1,0 +1,64 @@
+ultilize funçao Elabore um algoritmo que leia nome do produto, quantidade, preço e o tipo de pagamento. 
+Após calcule e mostre o valor final a ser pago considerando a escolha da condição de pagamento.
+ Utilize as condições de pagamento da tabela a seguir:
+
+Tipo Pagamento
+
+Condição
+
+1
+
+À vista em dinheiro recebe 10% de desconto À vista no cartão de crédito,
+ recebe 5% de desconto Em duas vezes, preço normal sem juros Em três vezes, preço normal mais juros de 5% acréscimo
+
+
+
+def calcular_valor_final(nome_produto, quantidade, preco, tipo_pagamento):
+    if tipo_pagamento == 1:  # À vista em dinheiro
+        valor_desconto = preco * 0.1
+        valor_final = preco - valor_desconto
+        print(f"Nome do produto: {nome_produto}")
+        print(f"Quantidade: {quantidade}")
+        print(f"Preço: R${preco:.2f}")
+        print("Condição de pagamento: À vista em dinheiro")
+        print(f"Valor final a ser pago: R${valor_final:.2f}")
+
+    elif tipo_pagamento == 2:  # À vista no cartão de crédito
+        valor_desconto = preco * 0.05
+        valor_final = preco - valor_desconto
+        print(f"Nome do produto: {nome_produto}")
+        print(f"Quantidade: {quantidade}")
+        print(f"Preço: R${preco:.2f}")
+        print("Condição de pagamento: À vista no cartão de crédito")
+        print(f"Valor final a ser pago: R${valor_final:.2f}")
+
+    elif tipo_pagamento == 3:  # Em duas vezes
+        valor_final = preco
+        print(f"Nome do produto: {nome_produto}")
+        print(f"Quantidade: {quantidade}")
+        print(f"Preço: R${preco:.2f}")
+        print("Condição de pagamento: Em duas vezes")
+        print(f"Valor final a ser pago: R${valor_final:.2f}")
+
+    elif tipo_pagamento == 4:  # Em três vezes
+        valor_acrescimo = preco * 0.05
+        valor_final = preco + valor_acrescimo
+        print(f"Nome do produto: {nome_produto}")
+        print(f"Quantidade: {quantidade}")
+        print(f"Preço: R${preco:.2f}")
+        print("Condição de pagamento: Em três vezes")
+        print(f"Valor final a ser pago: R${valor_final:.2f}")
+
+    else:
+        print("Tipo de pagamento inválido. Por favor, escolha uma opção válida.")
+
+
+# Solicitar informações do produto
+nome_produto = input("Digite o nome do produto: ")
+quantidade = int(input("Digite a quantidade: "))
+preco = float(input("Digite o preço: "))
+tipo_pagamento = int(input("Digite o tipo de pagamento (1 - À vista em dinheiro, 2 - À vista no cartão de crédito, 3 - Em duas vezes, 4 - Em três vezes): "))
+
+# Calcular e exibir o valor final a ser pago
+calcular_valor_final(nome_produto, quantidade, preco, tipo_pagamento)
+

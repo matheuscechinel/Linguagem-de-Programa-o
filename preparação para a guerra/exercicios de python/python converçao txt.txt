@@ -1,0 +1,21 @@
+Faça um algoritmo que tenha um menu de conversão de R$ para US$ e US$ para R$ cada opção do menu deverá fazer
+a conversão da moeda correspondente. O usuário vai digitar o quanto de dinheiro tem e qual a cotação do dólar do dia.
+
+
+valor = float(input("Digite o valor em dinheiro: "))
+cotacao = float(input("Digite a cotação do dólar do dia: "))
+
+print("Menu de conversão:")
+print("1. R$ para US$")
+print("2. US$ para R$")
+
+opcao = int(input("Digite a opção desejada: "))
+
+if opcao == 1:
+    valor_convertido = valor / cotacao
+    print("Valor convertido para US$: $", valor_convertido)
+elif opcao == 2:
+    valor_convertido = valor * cotacao
+    print("Valor convertido para R$: R$", valor_convertido)
+else:
+    print("Opção inválida.")

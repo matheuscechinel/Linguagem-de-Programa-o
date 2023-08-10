@@ -1,0 +1,18 @@
+A Prefeitura de uma cidade acaba de receber uma verba do Governo no valor de U$ 150.000,00 para a reforma
+das praças Municipais. A reforma de cada praça custa aproximadamente U$ 1.350,00, Construir um algoritmo para ler
+valor do dólar do dia, converter o valor da verba e o valor da reforma em Reais e verificar quantas praças podem ser
+reformados aproximadamente. Exibir o valor da verba e o valor da reforma em Reais e a quantidade de Praças que poderão
+ser reformadas.
+
+
+valor_dolar = float(input("Digite o valor do dólar do dia: "))
+verba_dolar = 150000
+valor_reforma_dolar = 1350
+
+verba_real = verba_dolar * valor_dolar
+valor_reforma_real = valor_reforma_dolar * valor_dolar
+quantidade_pracas = verba_real // valor_reforma_real
+
+print("Valor da verba em reais:", verba_real)
+print("Valor da reforma em reais:", valor_reforma_real)
+print("Quantidade de praças que podem ser reformadas:", quantidade_pracas)

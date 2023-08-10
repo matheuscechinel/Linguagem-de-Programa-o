@@ -1,0 +1,21 @@
+Faça um programa em PYTHON que ela uma letra (caracter) do alfabeto (de A a Z) Informada pelo usuário.
+Deve Conter uma função que receba a letra como parámetro,
+após verifique e retorne ao programa principal exibindo uma mensagem se o caracter recebido é uma VOGAL ou CONSOANTE.
+Deve mostrar uma mensagem de erro caso o caracter recebido não seja válido
+
+def verificar_caractere(letra):
+    if letra.isalpha() and len(letra) == 1:
+        if letra in 'AEIOUaeiou':
+            return "VOGAL"
+        else:
+            return "CONSOANTE"
+    else:
+        return "Caractere inválido"
+
+caractere = input("Digite uma letra do alfabeto: ")
+
+resultado = verificar_caractere(caractere)
+
+print("Resultado:", resultado)
+
+

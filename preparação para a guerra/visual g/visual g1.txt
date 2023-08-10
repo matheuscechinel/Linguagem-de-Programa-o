@@ -1,0 +1,21 @@
+Algoritmo DadosFuncionario
+    // Ler os dados do funcionário
+    Leia codigo
+    Leia nome
+    Leia funcao
+    Leia idade
+    Leia salario
+    Leia sexo
+    Leia numeroFilhos
+    Leia estadoCivil
+
+    // Exibir os dados cadastrados
+    Escreva "Código: ", codigo
+    Escreva "Nome: ", nome
+    Escreva "Função: ", funcao
+    Escreva "Idade: ", idade
+    Escreva "Salário: ", salario
+    Escreva "Sexo: ", sexo
+    Escreva "Número de filhos: ", numeroFilhos
+    Escreva "Estado civil: ", estadoCivil
+FimAlgoritmo

@@ -1,0 +1,11 @@
+Algoritmo VerificarParImpar
+    // Ler o número
+    Leia numero
+
+    // Verificar se o número é par ou ímpar
+    Se numero % 2 == 0 Então
+        Escreva "O número é par"
+    Senão
+        Escreva "O número é ímpar"
+    FimSe
+FimAlgoritmo

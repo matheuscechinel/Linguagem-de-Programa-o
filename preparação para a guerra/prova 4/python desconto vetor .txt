@@ -1,0 +1,38 @@
+ultilize funçao Elabore um algoritmo que leia nome do produto, quantidade, preço e o tipo de pagamento. 
+Após calcule e mostre o valor final a ser pago considerando a escolha da condição de pagamento.
+ Utilize as condições de pagamento da tabela a seguir:
+
+Tipo Pagamento
+
+Condição
+
+1
+
+À vista em dinheiro recebe 10% de desconto À vista no cartão de crédito,
+ recebe 5% de desconto Em duas vezes, preço normal sem juros Em três vezes, preço normal mais juros de 5% acréscimo
+
+
+nome_produto = input("Digite o nome do produto: ")
+quantidade = int(input("Digite a quantidade do produto: "))
+preco = float(input("Digite o preço unitário do produto: "))
+tipo_pagamento = int(input("Digite o tipo de pagamento (1 - à vista em dinheiro, 2 - à vista no cartão de crédito, 3 - em duas vezes, 4 - em três vezes): "))
+
+valor_total = quantidade * preco
+
+if tipo_pagamento == 1:
+    valor_final = valor_total * 0.9  # 10% de desconto
+elif tipo_pagamento == 2:
+    valor_final = valor_total * 0.95  # 5% de desconto
+elif tipo_pagamento == 3:
+    valor_final = valor_total  # preço normal, sem juros
+elif tipo_pagamento == 4:
+    valor_final = valor_total * 1.05  # preço normal + 5% de juros
+else:
+    print("Opção inválida!")
+
+if tipo_pagamento in [1, 2, 3, 4]:
+    print("Produto: ", nome_produto)
+    print("Quantidade: ", quantidade)
+    print("Preço unitário: R$", preco)
+    print("Valor a ser pago: R$", valor_final)
+

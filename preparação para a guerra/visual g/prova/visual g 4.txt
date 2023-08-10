@@ -1,0 +1,51 @@
+O HEMOSC de uma cidade deseja controlar as doações de sangue de seus pacientes.
+ Faça um algoritmo que receba como entrada os dados do paciente: nome do paciente, idade e peso.
+ Após verifique se o doador se encaixa nas categorias de doação e mostre uma mensagem:
+
+Pessoas de 0 a 15 anos não podem ser doadores estarem abaixo da idade permitida.
+
+Pessoas de 16 e 17 anos e que estejam pesando mais de 50 kg, podem ser doadores com autorização dos pais ou responsáveis.
+
+• Pessoas de 18 a 69 e que estejam pesando mais de 50 kg, podem ser doadores.
+Pessoas acima de 69 anos não podem ser doadores por estarem acima da idade permitida.
+
+
+
+ALGORITMO "Controle de Doações de Sangue"
+
+VAR
+    nome_paciente: CARACTERE
+    idade_paciente, peso_paciente: INTEIRO
+
+INICIO
+    ESCREVA("Controle de Doações de Sangue")
+    ESCREVA("--------------------------------")
+    
+    ESCREVA("Digite o nome do paciente: ")
+    LEIA(nome_paciente)
+    
+    ESCREVA("Digite a idade do paciente: ")
+    LEIA(idade_paciente)
+    
+    ESCREVA("Digite o peso do paciente (em kg): ")
+    LEIA(peso_paciente)
+    
+    SE idade_paciente >= 0 E idade_paciente <= 15 ENTAO
+        ESCREVA("Pessoas de 0 a 15 anos não podem ser doadores por estarem abaixo da idade permitida.")
+    SENAO SE idade_paciente >= 16 E idade_paciente <= 17 ENTAO
+        SE peso_paciente > 50 ENTAO
+            ESCREVA(nome_paciente, " pode ser doador com autorização dos pais ou responsáveis.")
+        SENAO
+            ESCREVA(nome_paciente, " não atende ao requisito de peso mínimo para ser doador.")
+        FIMSE
+    SENAO SE idade_paciente >= 18 E idade_paciente <= 69 ENTAO
+        SE peso_paciente > 50 ENTAO
+            ESCREVA(nome_paciente, " pode ser doador.")
+        SENAO
+            ESCREVA(nome_paciente, " não atende ao requisito de peso mínimo para ser doador.")
+        FIMSE
+    SENAO SE idade_paciente > 69 ENTAO
+        ESCREVA("Pessoas acima de 69 anos não podem ser doadores por estarem acima da idade permitida.")
+    FIMSE
+    
+FIMALGORITMO

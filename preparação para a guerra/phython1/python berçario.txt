@@ -1,0 +1,22 @@
+while True:
+    nome = input("Digite o nome do aluno (ou digite 'sair' para encerrar): ")
+    if nome.lower() == 'sair':
+        break
+    
+    idade = int(input("Digite a idade do aluno: "))
+    
+    if idade >= 0 and idade <= 2:
+        nivel_escolar = "Berçário"
+    elif idade >= 3 and idade <= 6:
+        nivel_escolar = "Educação Infantil"
+    elif idade >= 7 and idade <= 10:
+        nivel_escolar = "Nível Fundamental I"
+    elif idade >= 11 and idade <= 15:
+        nivel_escolar = "Nível Fundamental II"
+    elif idade >= 16 and idade <= 18:
+        nivel_escolar = "Ensino Médio"
+    else:
+        nivel_escolar = "Nível não determinado"
+    
+    print(f"O aluno {nome} está no nível escolar: {nivel_escolar}\n")
+

@@ -1,0 +1,34 @@
+Faça um programa para ler 10 números DIFERENTES a serem armazenados em um vetor.
+ Os dados deverão ser armazenados no vetor na ordem que forem sendo lidos,
+ sendo que caso o usário digite um número que já foi digitado anteriormente,
+ o programa deverá pedir para ele digitar outro número.
+ Note que cada valor digitado pelo usuário deve ser pesquisado no vetor, 
+verificando se ele existe entre os números que já foram fornecidos. Exibir na tela o vetor final que foi digitado.
+
+Obs.: A verificação deve ser feita em uma função, que recebe o número digitado e retorna se o mesmo está no vetor ou não
+
+
+
+def verificar_numero_digitado(numero, vetor):
+    if numero in vetor:
+        return True
+    else:
+        return False
+
+def main():
+    vetor = []
+
+    for i in range(10):
+        while True:
+            numero = int(input(f"Digite o {i+1}º número: "))
+            if not verificar_numero_digitado(numero, vetor):
+                vetor.append(numero)
+                break
+            else:
+                print("Número repetido. Digite outro número.")
+
+    print("Vetor final:", vetor)
+
+if __name__ == "__main__":
+    main()
+

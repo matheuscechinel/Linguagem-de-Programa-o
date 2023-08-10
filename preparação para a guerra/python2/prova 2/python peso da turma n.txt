@@ -1,0 +1,54 @@
+Escrever um algoritmo em Python que leia o nome, peso, idade e o sexo dos alunos de um curso.
+Após, calcule e mostre:
+
+o maior e o menor peso da turma
+
+total de alunos do sexo masculino e feminino total de alunos do maior e menor de idade
+def calcular_estatisticas_alunos():
+    n = int(input("Digite o número de alunos: "))
+
+    # Inicializar as variáveis para guardar as estatísticas
+    maior_peso = float('-inf')
+    menor_peso = float('inf')
+    total_masculino = 0
+    total_feminino = 0
+    maior_idade = float('-inf')
+    menor_idade = float('inf')
+
+    for i in range(n):
+        print(f"\nAluno {i+1}")
+        nome = input("Nome: ")
+        peso = float(input("Peso (kg): "))
+        idade = int(input("Idade: "))
+        sexo = input("Sexo (M/F): ")
+
+        # Verificar o maior e menor peso
+        if peso > maior_peso:
+            maior_peso = peso
+        if peso < menor_peso:
+            menor_peso = peso
+
+        # Contar o total de alunos do sexo masculino e feminino
+        if sexo == 'M':
+            total_masculino += 1
+        elif sexo == 'F':
+            total_feminino += 1
+
+        # Verificar a maior e menor idade
+        if idade > maior_idade:
+            maior_idade = idade
+        if idade < menor_idade:
+            menor_idade = idade
+
+    return maior_peso, menor_peso, total_masculino, total_feminino, maior_idade, menor_idade
+
+# Calcular estatísticas dos alunos
+maior_peso, menor_peso, total_masculino, total_feminino, maior_idade, menor_idade = calcular_estatisticas_alunos()
+
+# Imprimir resultados
+print(f"\nMaior peso da turma: {maior_peso} kg")
+print(f"Menor peso da turma: {menor_peso} kg")
+print(f"Total de alunos do sexo masculino: {total_masculino}")
+print(f"Total de alunos do sexo feminino: {total_feminino}")
+print(f"Maior idade da turma: {maior_idade} anos")
+print(f"Menor idade da turma: {menor_idade} anos")

@@ -1,0 +1,13 @@
+algoritmo "Antecessor e Sucessor"
+var
+   numero, antecessor, sucessor: inteiro
+inicio
+   escreva("Digite um número inteiro: ")
+   leia(numero)
+
+   antecessor <- numero - 1
+   sucessor <- numero + 1
+
+   escreva("Antecessor: ", antecessor)
+   escreva("Sucessor: ", sucessor)
+fimalgoritmo

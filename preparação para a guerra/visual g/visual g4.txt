@@ -1,0 +1,15 @@
+Algoritmo SomarOuMultiplicar
+    // Ler os valores
+    Leia A
+    Leia B
+
+    // Verificar se os valores são iguais
+    Se A == B Então
+        C <- A + B
+    Senão
+        C <- A * B
+    FimSe
+
+    // Exibir o resultado
+    Escreva "Resultado: ", C
+FimAlgoritmo

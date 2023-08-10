@@ -1,0 +1,57 @@
+funcionarios = []
+
+codigo = []
+nome = []
+salario = []
+cargo = []
+i = -1
+
+def cadFuncionario():
+    global i
+    i = i + 1
+    codigo.append(i + 1)
+    print("Código", codigo[i])
+    nome.append(input("Digite seu nome: "))
+    salario.append(float(input("Salário: ")))
+    while True:
+        cargo_escolhido = input("Cargo (tecnico/auxiliar/gerente/demais cargos): ")
+        if (cargo_escolhido.upper() != "TECNICO") and (cargo_escolhido.upper() != "AUXILIAR") and (cargo_escolhido.upper() != "GERENTE") and (cargo_escolhido.upper() != "DEMIAS CARGOS"):
+            print("Cargo inválido")
+        else:
+            break
+    cargo.append(cargo_escolhido)
+
+def listaFuncionario():
+    global i
+    if i == -1:
+        print("Nenhum funcionário no sistema")
+    else:
+        auxcargo = input("Qual o cargo a procurar: ")
+        achou = False
+        for j in range(len(codigo)):
+            if auxcargo == cargo[j]:
+                print(codigo[j], nome[j], cargo[j], salario[j])
+                achou = True
+        if not achou:
+            print("Nenhum funcionário encontrado!")
+
+def main():
+    while True:
+        op = int(input("1 - Cadastro de Funcionários\n2 - Lista Funcionários\n3 - Sair"))
+        if op == 1:
+            cadFuncionario()
+        elif op == 2:
+            listaFuncionario()
+        elif op == 3:
+            break
+
+    funcionarios.append(codigo)
+    funcionarios.append(nome)
+    funcionarios.append(salario)
+    funcionarios.append(cargo)
+
+    print("Lista de Funcionários:")
+    for f in funcionarios:
+        print(f)
+
+main()

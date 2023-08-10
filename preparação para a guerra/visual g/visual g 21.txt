@@ -1,0 +1,32 @@
+Algoritmo "Verificação de Departamento"
+
+Var
+   nome: Caractere
+   codigoDepartamento: Inteiro
+
+Inicio
+   Escreva("Digite o nome do funcionário: ")
+   Leia(nome)
+
+   Escreva("Digite o código do departamento: ")
+   Leia(codigoDepartamento)
+
+   Escolha codigoDepartamento
+      Caso 1:
+         Escreva("Funcionário: ", nome)
+         Escreva("Departamento: Departamento de Financeiro")
+      Caso 2:
+         Escreva("Funcionário: ", nome)
+         Escreva("Departamento: Departamento de Contabilidade")
+      Caso 3:
+         Escreva("Funcionário: ", nome)
+         Escreva("Departamento: Departamento de Compras")
+      Caso 4:
+         Escreva("Funcionário: ", nome)
+         Escreva("Departamento: Departamento de Vendas")
+      Senao:
+         Escreva("Funcionário: ", nome)
+         Escreva("Departamento: Departamento Inválido")
+   FimEscolha
+
+FimAlgoritmo

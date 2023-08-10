@@ -1,0 +1,11 @@
+algoritmo "Reajuste de Saldo"
+var
+   saldo, saldoReajustado: real
+inicio
+   escreva("Digite o saldo da conta poupança: ")
+   leia(saldo)
+
+   saldoReajustado <- saldo * 1.01
+
+   escreva("Saldo com reajuste de 1%: ", saldoReajustado)
+fimalgoritmo

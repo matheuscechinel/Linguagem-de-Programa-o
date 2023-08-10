@@ -1,0 +1,31 @@
+Algoritmo "Aumento Salarial"
+
+Var
+   nome: Caractere
+   salarioInicial, salarioFinal, aumento: Real
+
+Inicio
+   Escreva("Digite o nome do funcionário: ")
+   Leia(nome)
+
+   Escreva("Digite o salário inicial do funcionário: ")
+   Leia(salarioInicial)
+
+   Se salarioInicial < 300.00 Entao
+      aumento <- salarioInicial * 0.05
+   Senao
+      Se salarioInicial <= 400.00 Entao
+         aumento <- salarioInicial * 0.03
+      Senao
+         aumento <- salarioInicial * 0.02
+      FimSe
+   FimSe
+
+   salarioFinal <- salarioInicial + aumento
+
+   Escreva("Funcionário: ", nome)
+   Escreva("Salário inicial: R$", salarioInicial)
+   Escreva("Aumento: R$", aumento)
+   Escreva("Salário final: R$", salarioFinal)
+
+FimAlgoritmo

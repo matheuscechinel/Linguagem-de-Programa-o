@@ -1,0 +1,14 @@
+Algoritmo VerificarSoma
+    // Ler os valores
+    Leia A
+    Leia B
+    Leia C
+
+    // Verificar se a soma de A + B é menor que C
+    Se A + B < C Então
+        Escreva "A + B é menor que C"
+    Senão
+        Escreva "A + B não é menor que C"
+    FimSe
+FimAlgoritmo
+

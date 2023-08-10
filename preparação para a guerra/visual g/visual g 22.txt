@@ -1,0 +1,27 @@
+Algoritmo "Classe Eleitoral"
+
+Var
+   nome: Caractere
+   idade: Inteiro
+
+Inicio
+   Escreva("Digite o nome da pessoa: ")
+   Leia(nome)
+
+   Escreva("Digite a idade da pessoa: ")
+   Leia(idade)
+
+   Se idade < 16 Entao
+      Escreva("Nome: ", nome)
+      Escreva("Classe Eleitoral: Não votante")
+   Senao
+      Se idade >= 18 E idade <= 65 Entao
+         Escreva("Nome: ", nome)
+         Escreva("Classe Eleitoral: Eleitor obrigatório")
+      Senao
+         Escreva("Nome: ", nome)
+         Escreva("Classe Eleitoral: Eleitor facultativo")
+      FimSe
+   FimSe
+
+FimAlgoritmo

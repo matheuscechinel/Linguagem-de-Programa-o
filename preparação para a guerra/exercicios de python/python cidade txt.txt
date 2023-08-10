@@ -1,0 +1,59 @@
+Fol feita uma estatística em cinco cidades brasileiras para coletar dados sobre acidentes de trânsito. Foram obtidos os seguintes dados:
+
+a. Código da cidade;
+
+b. Número de veículos de passeio (em 2021); c. Número de acidentes de trânsito com vítimas (em 2021).
+
+Deseja-se saber:
+
+a. Qual o maior e menor índice de acidentes de transito e a que cidade
+
+pertence; b. Qual a média de veículos nas cinco cidades juntas; c. Qual a média de acidentes de trânsito nas cidades com menos de 2.000
+
+veículos de passeio.
+
+
+
+# Variáveis para armazenar os dados
+maior_indice = 0
+menor_indice = float('inf')
+cidade_maior_indice = ''
+cidade_menor_indice = ''
+total_veiculos = 0
+total_cidades_menos_2000_veiculos = 0
+total_acidentes_menos_2000_veiculos = 0
+
+# Coletar os dados das cinco cidades
+for i in range(5):
+    codigo = input("Digite o código da cidade: ")
+    veiculos = int(input("Digite o número de veículos de passeio em 2021: "))
+    acidentes = int(input("Digite o número de acidentes de trânsito com vítimas em 2021: "))
+
+    # Verificar o maior e menor índice de acidentes e suas respectivas cidades
+    indice = acidentes / veiculos
+    if indice > maior_indice:
+        maior_indice = indice
+        cidade_maior_indice = codigo
+    if indice < menor_indice:
+        menor_indice = indice
+        cidade_menor_indice = codigo
+
+    # Calcular a média de veículos nas cidades
+    total_veiculos += veiculos
+
+    # Verificar se a cidade tem menos de 2000 veículos
+    if veiculos < 2000:
+        total_cidades_menos_2000_veiculos += 1
+        total_acidentes_menos_2000_veiculos += acidentes
+
+# Calcular as médias
+media_veiculos = total_veiculos / 5
+media_acidentes_menos_2000_veiculos = total_acidentes_menos_2000_veiculos / total_cidades_menos_2000_veiculos
+
+# Exibir os resultados
+print("\nResultado:")
+print("Maior índice de acidentes:", maior_indice, "na cidade", cidade_maior_indice)
+print("Menor índice de acidentes:", menor_indice, "na cidade", cidade_menor_indice)
+print("Média de veículos nas cinco cidades:", media_veiculos)
+print("Média de acidentes nas cidades com menos de 2000 veículos:", media_acidentes_menos_2000_veiculos)
+

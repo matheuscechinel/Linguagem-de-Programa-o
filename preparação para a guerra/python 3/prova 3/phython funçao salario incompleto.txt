@@ -1,0 +1,35 @@
+Escreva um programa em PYTHON que leia nome, cargo e salário dos funcionários de uma empresa.
+ Deve conter uma função que/receba cargo e o salário bruto como parâmetro,
+ após calcule e retorne ao programa principal exibindo o salário Kado final, com base nos cálculos abaixo:
+
+Se crgo Analista, acréscimo de 5% ao salário.
+
+Secargo Programador, acréscimo de 8% ao salário.
+
+Para os demais casos, acréscimo de 3% ao salário.
+
+def calcular_salario_final(cargo, salario_bruto):
+    if cargo == "Analista":
+        salario_final = salario_bruto * 1.05
+    elif cargo == "Programador":
+        salario_final = salario_bruto * 1.08
+    else:
+        salario_final = salario_bruto * 1.03
+
+    return salario_final
+
+num_funcionarios = int(input("Digite o número de funcionários: "))
+
+for i in range(num_funcionarios):
+    print(f"\nFuncionário {i+1}")
+    nome = input("Digite o nome do funcionário: ")
+    cargo = input("Digite o cargo do funcionário: ")
+    salario_bruto = float(input("Digite o salário bruto do funcionário: "))
+
+    salario_final = calcular_salario_final(cargo, salario_bruto)
+
+    print(f"\nNome: {nome}")
+    print(f"Cargo: {cargo}")
+    print(f"Salário Líquido: R${salario_final:.2f}")
+
+

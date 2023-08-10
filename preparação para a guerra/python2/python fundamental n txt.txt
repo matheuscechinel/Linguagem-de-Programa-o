@@ -1,0 +1,32 @@
+Construir um algoritmo que leia N nome e formação dos alunos de uma escola.
+ Após verificar o total de alunos em cada formação:
+
+Ensino Fundamental 
+
+Ensino Médio
+
+Ensino Técnico
+
+Graduação
+
+formacoes = {
+    "Ensino Fundamental": 0,
+    "Ensino Médio": 0,
+    "Ensino Técnico": 0,
+    "Graduação": 0
+}
+
+n = int(input("Digite o número de alunos: "))
+
+for _ in range(n):
+    nome = input("Digite o nome do aluno: ")
+    formacao = input("Digite a formação do aluno (Ensino Fundamental, Ensino Médio, Ensino Técnico ou Graduação): ")
+
+    if formacao in formacoes:
+        formacoes[formacao] += 1
+    else:
+        print("Formação inválida!")
+
+print("\nTotal de alunos em cada formação:")
+for formacao, total_alunos in formacoes.items():
+    print(f"{formacao}: {total_alunos}")

@@ -1,0 +1,44 @@
+Foi realizada uma pesquisa de algumas características físicas da população de uma certa cidade.
+ Foram entrevistadas N pessoas e coletados os seguintes dadost o sexo,
+ a cor dos olhos: A (azuis), V (verdes) e O (outros) e a cor dos cabelos: L (louros), C (castanhos) e P (pretos).
+
+a. Deseja-se saber:
+
+i.Ctotal de pessoas para cada classificação da cor dos olhos (cada) ii.
+total de pessoas para cada classificação da cor dos cabelos (cada) total de pessoas do sexo feminino com olhos azuis
+e cabelos louros
+
+def realizar_pesquisa():
+    n = int(input("Digite o número de pessoas entrevistadas: "))
+
+    contagem_olhos = {'A': 0, 'V': 0, 'O': 0}
+    contagem_cabelos = {'L': 0, 'C': 0, 'P': 0}
+    contagem_feminino_olhos_azuis_cabelos_louros = 0
+
+    for i in range(n):
+        sexo = input("Digite o sexo (M/F): ")
+        olhos = input("Digite a cor dos olhos (A/V/O): ")
+        cabelos = input("Digite a cor dos cabelos (L/C/P): ")
+
+        contagem_olhos[olhos] += 1
+        contagem_cabelos[cabelos] += 1
+
+        if sexo == 'F' and olhos == 'A' and cabelos == 'L':
+            contagem_feminino_olhos_azuis_cabelos_louros += 1
+
+    return contagem_olhos, contagem_cabelos, contagem_feminino_olhos_azuis_cabelos_louros
+
+# Realização da pesquisa
+contagem_olhos, contagem_cabelos, contagem_feminino_olhos_azuis_cabelos_louros = realizar_pesquisa()
+
+# Impressão dos resultados
+print("Total de pessoas para cada classificação da cor dos olhos:")
+for cor_olhos, contagem in contagem_olhos.items():
+    print("Cor dos olhos", cor_olhos, ":", contagem)
+
+print("\nTotal de pessoas para cada classificação da cor dos cabelos:")
+for cor_cabelos, contagem in contagem_cabelos.items():
+    print("Cor dos cabelos", cor_cabelos, ":", contagem)
+
+print("\nTotal de pessoas do sexo feminino com olhos azuis e cabelos louros:", contagem_feminino_olhos_azuis_cabelos_louros)
+

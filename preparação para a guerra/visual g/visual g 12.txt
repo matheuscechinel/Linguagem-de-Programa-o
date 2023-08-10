@@ -1,0 +1,14 @@
+algoritmo "Cálculo de Médias"
+var
+   media1, media2, soma, mediaFinal: real
+inicio
+   media1 <- (8 + 9 + 7) / 3
+   media2 <- (4 + 5 + 6) / 3
+   soma <- media1 + media2
+   mediaFinal <- soma / 2
+
+   escreva("Média dos números 8, 9 e 7: ", media1)
+   escreva("Média dos números 4, 5 e 6: ", media2)
+   escreva("Soma das duas médias: ", soma)
+   escreva("Média das médias: ", mediaFinal)
+fimalgoritmo

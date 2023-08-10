@@ -1,0 +1,37 @@
+Faça um algoritmo que leia código, nome, função, idade, salario, sexo, número de filhos, estado civil de
+um funcionário e ao final da digitação, mostrar todos os dados cadastrados.
+Faça um algoritmo que leia os valores A, B, C e mostre na tela se a soma de A + B é menor c
+
+
+# Cadastro de funcionário
+codigo = input("Digite o código do funcionário: ")
+nome = input("Digite o nome do funcionário: ")
+funcao = input("Digite a função do funcionário: ")
+idade = int(input("Digite a idade do funcionário: "))
+salario = float(input("Digite o salário do funcionário: "))
+sexo = input("Digite o sexo do funcionário: ")
+num_filhos = int(input("Digite o número de filhos do funcionário: "))
+estado_civil = input("Digite o estado civil do funcionário: ")
+
+# Exibição dos dados cadastrados
+print("\nDados cadastrados:")
+print("Código:", codigo)
+print("Nome:", nome)
+print("Função:", funcao)
+print("Idade:", idade)
+print("Salário:", salario)
+print("Sexo:", sexo)
+print("Número de filhos:", num_filhos)
+print("Estado civil:", estado_civil)
+
+# Verificação da soma A + B menor que C
+A = float(input("\nDigite o valor de A: "))
+B = float(input("Digite o valor de B: "))
+C = float(input("Digite o valor de C: "))
+
+soma_ab = A + B
+if soma_ab < C:
+    print("A soma de A + B é menor que C.")
+else:
+    print("A soma de A + B não é menor que C.")
+

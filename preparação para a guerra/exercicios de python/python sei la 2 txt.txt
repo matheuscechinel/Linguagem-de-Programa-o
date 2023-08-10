@@ -1,0 +1,26 @@
+m vendedor ganha o salário mensal acrescido do valor da comissão de vendas. Faça um algoritmo para cadastrar
+o salário mensal, qual o produto que ele vendeu (produtos A, B ou C) e a 
+quantidade vendida deste produto. Calcule a comissão de vendas, conforme a tabela:
+
+
+salario_mensal = float(input("Digite o salário mensal do vendedor: "))
+produto = input("Digite o código do produto vendido (A, B ou C): ")
+quantidade = int(input("Digite a quantidade vendida: "))
+
+if produto == "A":
+    valor_unitario = 5.00
+    comissao = quantidade * valor_unitario * 0.05
+elif produto == "B":
+    valor_unitario = 10.00
+    comissao = quantidade * valor_unitario * 0.10
+elif produto == "C":
+    valor_unitario = 15.00
+    comissao = quantidade * valor_unitario * 0.05
+else:
+    print("Produto inválido!")
+
+faturamento = salario_mensal + comissao
+
+print("Produto vendido:", produto)
+print("Valor unitário:", valor_unitario)
+print("Faturamento:", faturamento)

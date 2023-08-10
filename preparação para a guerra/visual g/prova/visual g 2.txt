@@ -1,0 +1,42 @@
+ALGORITMO "Calculadora de Pagamento"
+VAR
+    nome_produto: CARACTERE
+    quantidade, preco, valor_total, valor_final: INTEIRO
+    tipo_pagamento: INTEIRO
+
+INICIO
+    ESCREVA("Digite o nome do produto: ")
+    LEIA(nome_produto)
+
+    ESCREVA("Digite a quantidade: ")
+    LEIA(quantidade)
+
+    ESCREVA("Digite o preço unitário: ")
+    LEIA(preco)
+
+    ESCREVA("Digite o tipo de pagamento (1 - À vista em dinheiro / 2 - À vista no cartão de crédito / 3 - Em duas vezes / 4 - Em três vezes): ")
+    LEIA(tipo_pagamento)
+
+    valor_total <- quantidade * preco
+
+    SE tipo_pagamento = 1 ENTAO
+        valor_final <- valor_total - (valor_total * 10 / 100)  // 10% de desconto
+    SENAO SE tipo_pagamento = 2 ENTAO
+        valor_final <- valor_total - (valor_total * 5 / 100)  // 5% de desconto
+    SENAO SE tipo_pagamento = 3 ENTAO
+        valor_final <- valor_total  // preço normal sem juros
+    SENAO SE tipo_pagamento = 4 ENTAO
+        valor_final <- valor_total + (valor_total * 5 / 100)  // preço normal com 5% de acréscimo
+    FIMSE
+
+    ESCREVA("-------------------------------------")
+    ESCREVA("Detalhes do Pedido")
+    ESCREVA("Nome do produto: ", nome_produto)
+    ESCREVA("Quantidade: ", quantidade)
+    ESCREVA("Preço unitário: R$", preco)
+    ESCREVA("-------------------------------------")
+    ESCREVA("Valor total: R$", valor_total)
+    ESCREVA("Valor final a ser pago: R$", valor_final)
+
+FIMALGORITMO
+

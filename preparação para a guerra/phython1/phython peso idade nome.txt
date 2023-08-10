@@ -1,0 +1,38 @@
+ultilize paython e funçao O HEMOSC de uma cidade deseja controlar as doações de sangue de seus pacientes.
+Faça um algoritmo que receba como entrada os dados do paciente: nome do paciente, idade e peso. Após verifique se o doador se encaixa nas categorias de doação e mostre uma mensagem:
+
+Pessoas de 0 a 15 anos não podem ser doadores estarem abaixo da idade permitida.
+
+Pessoas de 16 e 17 anos e que estejam pesando mais de 50 kg, podem ser doadores com autorização dos pais ou responsáveis.
+
+• Pessoas de 18 a 69 e que estejam pesando mais de 50 kg,
+ podem ser doadores. Pessoas acima de 69 anos não podem ser doadores por estarem acima da idade permitida.
+
+
+
+
+def verificar_doacao(nome, idade, peso):
+    if idade >= 0 and idade <= 15:
+        return "Pessoas de 0 a 15 anos não podem ser doadores por estarem abaixo da idade permitida."
+    elif idade >= 16 and idade <= 17:
+        if peso > 50:
+            return nome + " pode ser doador com autorização dos pais ou responsáveis."
+        else:
+            return nome + " não atende ao requisito de peso mínimo para ser doador."
+    elif idade >= 18 and idade <= 69:
+        if peso > 50:
+            return nome + " pode ser doador."
+        else:
+            return nome + " não atende ao requisito de peso mínimo para ser doador."
+    elif idade > 69:
+        return "Pessoas acima de 69 anos não podem ser doadores por estarem acima da idade permitida."
+    else:
+        return "Idade inválida."
+
+# Exemplo de utilização da função
+nome = input("Digite o nome do paciente: ")
+idade = int(input("Digite a idade do paciente: "))
+peso = float(input("Digite o peso do paciente (em kg): "))
+
+mensagem = verificar_doacao(nome, idade, peso)
+print(mensagem)

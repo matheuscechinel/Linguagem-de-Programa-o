@@ -1,0 +1,26 @@
+def verificar_categoria(nome, idade):
+    categorias = ['Categoria não encontrada', 'berçario', 'educaçao infantil', 'fndamental nivel 1', 'fndamental nivel 2']
+
+    if idade >= 0 and idade <= 2:
+        categoria = categorias[1]
+    elif idade >= 3 and idade <= 6:
+        categoria = categorias[2]
+    elif idade >= 7 and idade <= 10:
+        categoria = categorias[3]
+    elif idade >= 11 and idade <= 15:
+        categoria = categorias[4]
+    else:
+        categoria = categorias[0]
+
+    return categoria
+
+
+def main():
+    nome = input('Digite o nome da pessoa: ')
+    idade = int(input('Digite a idade da pessoa: '))
+
+    categoria = verificar_categoria(nome, idade)
+    print(f'A pessoa {nome} está na categoria {categoria}.')
+
+
+main()

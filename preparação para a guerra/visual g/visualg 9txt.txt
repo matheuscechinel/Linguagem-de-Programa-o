@@ -1,0 +1,27 @@
+Algoritmo CalcularComissaoVendas
+    // Ler o salário mensal, o código do produto e a quantidade vendida
+    Leia salarioMensal
+    Leia codigoProduto
+    Leia quantidadeVendida
+
+    // Verificar o valor unitário e a comissão de acordo com o código do produto
+    Se codigoProduto == 1 Então
+        valorUnitario <- 5
+        comissao <- valorUnitario * quantidadeVendida * 0.05
+    Senão Se codigoProduto == 2 Então
+        valorUnitario <- 10
+        comissao <- valorUnitario * quantidadeVendida * 0.1
+    Senão Se codigoProduto == 3 Então
+        valorUnitario <- 15
+        comissao <- valorUnitario * quantidadeVendida * 0.05
+    FimSe
+
+    // Calcular o valor total faturado
+    valorFaturado <- valorUnitario * quantidadeVendida
+
+    // Exibir os resultados
+    Escreva "Produto vendido: ", codigoProduto
+    Escreva "Valor unitário: ", valorUnitario
+    Escreva "Valor faturado: ", valorFaturado
+FimAlgoritmo
+

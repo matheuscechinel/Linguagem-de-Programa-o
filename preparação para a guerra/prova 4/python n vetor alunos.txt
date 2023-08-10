@@ -1,0 +1,45 @@
+faça em vetor Construir um algoritmo que leia N nome e formação dos alunos de uma escola.
+ Após verificar o total de alunos em cada formação:
+
+Ensino Fundamental 
+
+Ensino Médio
+
+Ensino Técnico
+
+Graduação
+
+def contar_alunos_formacao(alunos):
+    formacoes = {
+        'Ensino Fundamental': 0,
+        'Ensino Médio': 0,
+        'Ensino Técnico': 0,
+        'Graduação': 0
+    }
+
+    for aluno in alunos:
+        formacao = aluno[1]
+        if formacao in formacoes:
+            formacoes[formacao] += 1
+
+    return formacoes
+
+# Lê o número total de alunos
+total_alunos = int(input("Digite o número total de alunos: "))
+
+# Cria uma lista vazia para armazenar os alunos
+alunos = []
+
+# Lê os nomes e formações dos alunos
+for i in range(total_alunos):
+    nome = input("Digite o nome do aluno {}: ".format(i+1))
+    formacao = input("Digite a formação do aluno {}: ".format(i+1))
+    alunos.append((nome, formacao))
+
+# Chama a função para contar os alunos em cada formação
+resultados = contar_alunos_formacao(alunos)
+
+# Exibe os resultados
+print("\nResultados:")
+for formacao, quantidade in resultados.items():
+    print("{}: {}".format(formacao, quantidade))

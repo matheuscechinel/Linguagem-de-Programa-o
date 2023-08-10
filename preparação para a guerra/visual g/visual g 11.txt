@@ -1,0 +1,15 @@
+algoritmo "Idade em Dias"
+var
+   anos, meses, dias, idadeEmDias: inteiro
+inicio
+   escreva("Digite a idade em anos: ")
+   leia(anos)
+   escreva("Digite a idade em meses: ")
+   leia(meses)
+   escreva("Digite a idade em dias: ")
+   leia(dias)
+
+   idadeEmDias <- (anos * 365) + (meses * 30) + dias
+
+   escreva("A idade em dias é: ", idadeEmDias)
+fimalgoritmo

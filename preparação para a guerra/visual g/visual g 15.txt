@@ -1,0 +1,14 @@
+algoritmo "Quantidade de Salários Mínimos"
+var
+   salarioMinimo, salarioUsuario, quantidadeSM: real
+inicio
+   escreva("Digite o valor do salário mínimo: ")
+   leia(salarioMinimo)
+   escreva("Digite o valor do salário do usuário: ")
+   leia(salarioUsuario)
+
+   quantidadeSM <- salarioUsuario / salarioMinimo
+
+   escreva("O usuário ganha ", quantidadeSM, " salários mínimos")
+fimalgoritmo
+

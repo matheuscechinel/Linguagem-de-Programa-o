@@ -1,0 +1,21 @@
+Algoritmo ConcederCreditoEspecial
+    // Ler o nome e o saldo médio do cliente
+    Leia nomeCliente
+    Leia saldoMedio
+
+    // Verificar o valor do crédito de acordo com o saldo médio
+    Se saldoMedio >= 0 E saldoMedio <= 2000 Então
+        valorCredito <- 0
+    Senão Se saldoMedio > 2000 E saldoMedio <= 4000 Então
+        valorCredito <- saldoMedio * 0.05
+    Senão Se saldoMedio > 4000 E saldoMedio <= 6000 Então
+        valorCredito <- saldoMedio * 0.1
+    Senão Se saldoMedio > 6000 Então
+        valorCredito <- saldoMedio * 0.15
+    FimSe
+
+    // Exibir os resultados
+    Escreva "Nome do cliente: ", nomeCliente
+    Escreva "Valor do crédito: ", valorCredito
+FimAlgoritmo
+

@@ -1,0 +1,60 @@
+FAÇA EM VISUAL G A Secretaria de Educação do Município deseja realizar um levantamento com seus alunos,
+ definido por nível de ensino. Elabore um algoritmo que leia o nome e idade do aluno e mostre em que nivel escolar
+ ele se encontra, de acordo com a tabela abaixo:
+
+Idade     Nível Escolar
+
+Berçário
+
+de 0 a 2 anos
+
+Educação Infantil
+
+de 3 a 6 anos
+
+Nível Fundamental 1
+
+de 7 a 10 anos
+
+Nível Fundamental II
+
+de 11 a 15 anos
+
+Ensino Médio
+
+de 16 a 18 anos
+
+
+
+
+
+ALGORITMO "Levantamento de Nível Escolar"
+
+VAR
+    nome_aluno: CARACTERE
+    idade_aluno: INTEIRO
+
+INICIO
+    ESCREVA("Levantamento de Nível Escolar")
+    ESCREVA("-----------------------------")
+    
+    ESCREVA("Digite o nome do aluno: ")
+    LEIA(nome_aluno)
+    
+    ESCREVA("Digite a idade do aluno: ")
+    LEIA(idade_aluno)
+    
+    SE idade_aluno >= 0 E idade_aluno <= 2 ENTAO
+        ESCREVA(nome_aluno, " está no nível Berçário.")
+    SENAO SE idade_aluno >= 3 E idade_aluno <= 6 ENTAO
+        ESCREVA(nome_aluno, " está no nível Educação Infantil.")
+    SENAO SE idade_aluno >= 7 E idade_aluno <= 10 ENTAO
+        ESCREVA(nome_aluno, " está no nível Nível Fundamental 1.")
+    SENAO SE idade_aluno >= 11 E idade_aluno <= 15 ENTAO
+        ESCREVA(nome_aluno, " está no nível Nível Fundamental II.")
+    SENAO SE idade_aluno >= 16 E idade_aluno <= 18 ENTAO
+        ESCREVA(nome_aluno, " está no nível Ensino Médio.")
+    FIMSE
+    
+FIMALGORITMO
+

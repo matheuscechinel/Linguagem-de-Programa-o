@@ -1,0 +1,44 @@
+def cadastrar_peixes():
+    n = int(input("Digite o número de peixes que deseja cadastrar: "))
+
+    nomes = []
+    pesos = []
+
+    for i in range(n):
+        nome = input("Digite o nome do peixe: ")
+        peso = float(input("Digite o peso do peixe em quilos: "))
+
+        nomes.append(nome)
+        pesos.append(peso)
+
+    return nomes, pesos
+
+def calcular_soma_total(pesos):
+    soma = sum(pesos)
+    return soma
+Cadastrar os N nome de peixe e o seu quilo que um pescador pegou em uma tarde de pesca em um pesque-pague. Ao final do cadastro imprimir, a soma total dos pesos do peixe,
+o nome e o peso do maior peixe e a média dos pesos dos peixes.
+
+
+def encontrar_maior_peixe(nomes, pesos):
+    indice_maior_peixe = pesos.index(max(pesos))
+    nome_maior_peixe = nomes[indice_maior_peixe]
+    peso_maior_peixe = pesos[indice_maior_peixe]
+    return nome_maior_peixe, peso_maior_peixe
+
+def calcular_media_pesos(pesos):
+    media = sum(pesos) / len(pesos)
+    return media
+
+# Cadastro dos peixes
+nomes_peixes, pesos_peixes = cadastrar_peixes()
+
+# Cálculos
+soma_total = calcular_soma_total(pesos_peixes)
+nome_maior_peixe, peso_maior_peixe = encontrar_maior_peixe(nomes_peixes, pesos_peixes)
+media_pesos = calcular_media_pesos(pesos_peixes)
+
+# Impressão dos resultados
+print("Soma total dos pesos dos peixes:", soma_total)
+print("Maior peixe:", nome_maior_peixe, "Peso:", peso_maior_peixe)
+print("Média dos pesos dos peixes:", media_pesos)

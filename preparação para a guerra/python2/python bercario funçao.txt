@@ -1,0 +1,54 @@
+A Secretaría de Educação do Município deseja realizar um levantamento com seus alunos,
+ definido por nível de ensino. Elabore um algoritmo que leia o nome e idade do aluno e
+ mostre em que nível escolar ele se encontra, de acordo com a tabela abaixo:
+
+Idade
+
+Nível Escolar
+
+de 0 a 2 anos
+
+Berçário
+
+de 3 a 6 anos
+
+de 7 a 10 anos
+
+Educação Infantil
+
+Nível Fundamental I
+
+de 11 a 15 anos
+
+de 16 a 18 anos
+
+Nível Fundamental II
+
+Ensino Médio
+
+
+
+
+def nivel_escolar(idade):
+    if idade >= 0 and idade <= 2:
+        return "Berçário"
+    elif idade >= 3 and idade <= 6:
+        return "Educação Infantil"
+    elif idade >= 7 and idade <= 10:
+        return "Nível Fundamental I"
+    elif idade >= 11 and idade <= 15:
+        return "Nível Fundamental II"
+    elif idade >= 16 and idade <= 18:
+        return "Ensino Médio"
+    else:
+        return "Nível desconhecido"
+
+# Solicitar o nome e idade do aluno
+nome = input("Digite o nome do aluno: ")
+idade = int(input("Digite a idade do aluno: "))
+
+# Chamar a função para obter o nível escolar
+nivel = nivel_escolar(idade)
+
+# Mostrar o resultado
+print(f"O aluno {nome} está no nível escolar: {nivel}")

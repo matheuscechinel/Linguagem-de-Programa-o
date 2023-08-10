@@ -1,0 +1,35 @@
+def verificar_categoria(idades):
+    categorias = []
+    for idade in idades:
+        if idade >= 0 and idade <= 18.5:
+            categoria = 'abaixo do peso'
+        elif idade > 18.5 and idade <= 25:
+            categoria = 'peso normal'
+        elif idade > 25 and idade <= 30:
+            categoria = 'acima do peso'
+        elif idade > 30:
+            categoria = 'obeso'
+        else:
+            categoria = 'Categoria não encontrada'
+
+        categorias.append(categoria)
+
+    return categorias
+
+
+def main():
+    nome = input('Digite o nome da pessoa: ')
+    idades = []
+
+    quantidade = int(input('Digite a quantidade de idades a serem verificadas: '))
+    for i in range(quantidade):
+        idade = float(input(f'Digite a idade {i + 1}: '))
+        idades.append(idade)
+
+    categorias = verificar_categoria(idades)
+
+    for i, categoria in enumerate(categorias):
+        print(f'A pessoa {nome} de idade {idades[i]} está na categoria {categoria}')
+
+
+main()

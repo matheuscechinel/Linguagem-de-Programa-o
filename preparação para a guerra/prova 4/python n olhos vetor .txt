@@ -1,0 +1,44 @@
+Foi realizada uma pesquisa de algumas características físicas da população de uma certa cidade.
+ Foram entrevistadas N pessoas e coletados os seguintes dadost o sexo,
+ a cor dos olhos: A (azuis), V (verdes) e O (outros) e a cor dos cabelos: L (louros), C (castanhos) e P (pretos).
+
+a. Deseja-se saber:
+
+i.Ctotal de pessoas para cada classificação da cor dos olhos (cada) ii.
+total de pessoas para cada classificação da cor dos cabelos (cada) total de pessoas do sexo feminino com olhos azuis
+e cabelos louros
+
+# Dados da pesquisa
+sexo = ['F', 'M', 'F', 'M', 'F', ...]  # exemplo de vetor sexo
+cor_olhos = ['A', 'V', 'O', 'A', 'V', ...]  # exemplo de vetor cor_olhos
+cor_cabelos = ['L', 'C', 'P', 'C', 'L', ...]  # exemplo de vetor cor_cabelos
+
+# Inicialização das contagens
+contagem_cor_olhos = {'A': 0, 'V': 0, 'O': 0}
+contagem_cor_cabelos = {'L': 0, 'C': 0, 'P': 0}
+total_feminino_olhos_azuis_cabelos_louros = 0
+
+# Contagem das classificações
+for i in range(len(sexo)):
+    # Contagem da cor dos olhos
+    cor_olho = cor_olhos[i]
+    contagem_cor_olhos[cor_olho] += 1
+
+    # Contagem da cor dos cabelos
+    cor_cabelo = cor_cabelos[i]
+    contagem_cor_cabelos[cor_cabelo] += 1
+
+    # Contagem do sexo feminino com olhos azuis e cabelos louros
+    if sexo[i] == 'F' and cor_olho == 'A' and cor_cabelo == 'L':
+        total_feminino_olhos_azuis_cabelos_louros += 1
+
+# Resultados
+print("Total de pessoas para cada classificação da cor dos olhos:")
+print(contagem_cor_olhos)
+print()
+print("Total de pessoas para cada classificação da cor dos cabelos:")
+print(contagem_cor_cabelos)
+print()
+print("Total de pessoas do sexo feminino com olhos azuis e cabelos louros:", total_feminino_olhos_azuis_cabelos_louros)
+
+

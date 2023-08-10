@@ -1,0 +1,33 @@
+Algoritmo EncontrarMaiorMenorMedia
+    // Ler os três valores
+    Leia valor1
+    Leia valor2
+    Leia valor3
+
+    // Encontrar o maior valor
+    Se valor1 >= valor2 E valor1 >= valor3 Então
+        maior <- valor1
+    Senão Se valor2 >= valor1 E valor2 >= valor3 Então
+        maior <- valor2
+    Senão
+        maior <- valor3
+    FimSe
+
+    // Encontrar o menor valor
+    Se valor1 <= valor2 E valor1 <= valor3 Então
+        menor <- valor1
+    Senão Se valor2 <= valor1 E valor2 <= valor3 Então
+        menor <- valor2
+    Senão
+        menor <- valor3
+    FimSe
+
+    // Calcular a média
+    media <- (valor1 + valor2 + valor3) / 3
+
+    // Exibir os resultados
+    Escreva "Maior valor: ", maior
+    Escreva "Menor valor: ", menor
+    Escreva "Média: ", media
+FimAlgoritmo
+
